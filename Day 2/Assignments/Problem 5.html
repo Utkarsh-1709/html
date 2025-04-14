@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Problem 5</title>
+    <style>
+        #registerEmp td{
+            background-color: rgb(216, 136, 150);
+            border: 1px solid black;
+            border-collapse: collapse;
+            /* padding-right : "100px"; */
+
+    }
+    .in{
+        width: fit-content;
+    }
+    .date{
+        display: flex;
+        gap: 40px;
+    }
+    #addr{
+        width: 98%;
+    }
+    </style>
 </head>
 <body>
-    
+    <table id="registerEmp" width = "50%" cellspacing = "0px">
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input class="in" type="text" min="10" max="50"></td>
+        </tr>
+        <tr>
+            <td><label for="empcode">Employee Code</label></td>
+            <td><input class="in" type="text" min="10" max="50"></td>
+        </tr>
+        <tr>
+            <td><label for="dept">Department</label></td>
+            <td><input type = "radio" name="Department" id="ADMIN" value="ADMIN"><label for="ADMIN">ADMIN</label><br>
+                <input type = "radio" name="Department" id="HR" value="HR"><label for="HR">HR</label><br>
+                <input type = "radio" name="Department" id="TECHNICAL" value="TECHNICAL"><label for="TECHNICAL">TECHNICAL</label><br>
+                <input type = "radio" name="Department" id="ACCOUNTS" value="ACCOUNTS"><label for="ACCOUNTS">ACCOUNTS</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="doj">Date of Joining</label></td>
+            <td><input type="number" min="1" max="31" width="10px">/
+                <input type="number" min="1" max="12" width="10px">/
+                <input type="number" min="1990" max="2005" width="10px"><br>
+                <div class="date">
+                    <span>dd</span><span>mm</span><span>yyyy</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="addr">Address</label></td>
+            <td><textarea name="addr" id="addr" rows="5" cols="20"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="sub">Training Programs Attended</label></td>
+            <td><input type="checkbox" name="Training Programs Attended" id="HTML/DHTML" value="HTML/DHTML"><label for="HTML/DHTML">HTML/DHTML</label><br>
+            <input type="checkbox" name="Training Programs Attended" id="JAVA" value="JAVA"><label for="JAVA">JAVA</label><br>
+            <input type="checkbox" name="Training Programs Attended" id="CLIENT/SERVER" value="CLIENT/SERVER"><label for="CLIENT/SERVER">CLIENT/SERVER</label><br>
+            <input type="checkbox" name="Training Programs Attended" id=".NET" value=".NET"><label for=".NET">.NET</label></td>
+        </tr>
+        <tr>
+            <td><label for="trp">Training Programs needs to Attend</label></td>
+            <td>
+                <select name="trp" id="prog" size="2">
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="JSTRUTS">JSTRUTS</option>
+                    <option value="C++">C++</option>
+                    <option value="GOLANG">GOLANG</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="email">Send the Information at</label></td>
+            <td><a href="#">empinfo@patni.com</a></td>
+        </tr>
+    </table>
 </body>
 </html>
